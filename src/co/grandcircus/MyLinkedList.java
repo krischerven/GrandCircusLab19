@@ -1,5 +1,6 @@
 package co.grandcircus;
 import java.util.LinkedList;
+import java.util.HashMap;
 
 public final class MyLinkedList
 	extends LinkedList<String>
@@ -29,6 +30,18 @@ public final class MyLinkedList
 				if (i == item) {
 					++ret;
 				}
+			}
+			return ret;
+		}
+		@Override
+		public String getFrequencyMap() {
+			HashMap<String, Integer> map = new HashMap<>();
+			for (String item : this) {
+				map.put(item, count(item));
+			}
+			String ret = "\n";
+			for (String key : map.keySet()) {
+				ret += "["+key+"]: " + map.get(key) + "\n";
 			}
 			return ret;
 		}

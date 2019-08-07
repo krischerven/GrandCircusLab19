@@ -4,4 +4,5 @@ public interface CustomList {
 	public boolean removeAt(int index);
 	public boolean insertAt(int index, String item);
 	public int count(String item);
+	public String getFrequencyMap();
 }

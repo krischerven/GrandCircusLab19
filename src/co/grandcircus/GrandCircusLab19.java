@@ -14,5 +14,8 @@ public class GrandCircusLab19 {
 		a.removeAt(2);
 		System.out.println(a.count("c"));
 		a.insertAt(2, "d");
+		a.insertAt(3, "d");
+		a.insertAt(4, "a");
+		System.out.println(a.getFrequencyMap());
 	}
 }
