@@ -5,9 +5,11 @@ import java.util.HashMap;
 public final class MyLinkedList
 	extends LinkedList<String>
 	implements CustomList {
+		// O(1)
 		public void addItem(String item) {
 			this.add(item);
 		}
+		// O(n)
 		@Override
 		public boolean removeAt(int index) {
 			for (int i = 0; i <= index; ++i) {
@@ -18,11 +20,13 @@ public final class MyLinkedList
 			}
 			return false;
 		}
+		// O(1)
 		@Override
 		public boolean insertAt(int index, String item) {
 			this.add(index, item);
 			return true;
 		}
+		// O(n)
 		@Override
 		public int count(String item) {
 			int ret = 0;
@@ -33,6 +37,7 @@ public final class MyLinkedList
 			}
 			return ret;
 		}
+		// O(n)
 		@Override
 		public String getFrequencyMap() {
 			HashMap<String, Integer> map = new HashMap<>();
